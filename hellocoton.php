@@ -17,7 +17,7 @@ add_filter('the_excerpt', 'hellocoton_hook');
 
 function hellocoton_html() {
 	
-	$articleUrl = htmlspecialchars(strip_tags(get_permalink()),ENT_QUOTES);
+	$articleUrl = urlencode(strip_tags(get_permalink()));
 	
 	return '<script src="http://www.hellocoton.fr/widgets/js.php?url='.$articleUrl.'" type="text/javascript"></script>
 	<noscript>Venez voter pour cet article sur <a href="http://www.hellocoton.fr">hellocoton</a></noscript>';
