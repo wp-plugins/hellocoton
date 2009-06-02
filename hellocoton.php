@@ -4,7 +4,7 @@ Plugin name: Hellocoton
 Plugin URI: http://www.hellocoton.fr/
 Author: Team Hellocoton
 Author URI: http://www.hellocoton.fr/
-Version: 0.2
+Version: 0.3
 Description: Ajoute un bouton "J'aime cet article" par hellocoton.
 
 INSTALL :
