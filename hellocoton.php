@@ -4,7 +4,7 @@ Plugin name: Hellocoton
 Plugin URI: http://www.hellocoton.fr/
 Author: Team Hellocoton
 Author URI: http://www.hellocoton.fr/
-Version: 0.4
+Version: 0.5
 Description: Ajoute un bouton "J'aime cet article" par hellocoton.
 
 INSTALL :
@@ -32,7 +32,7 @@ function hellocoton_html() {
 	<a id="hellocoton_unvote_'.$rand.'" href="#" onclick="javascript:return false;"  style="display:none;width:120px;height:26px;position:absolute;top:0;left:0;padding:0;border:0;margin:0;"><img src="'.$wpurl.'action-off.gif" border="0" style="padding:0;border:0;margin:0;float:none;" onmouseover="javascript:this.src=\''.$wpurl.'action-off-h.gif\'" onmouseout="javascript:this.src=\''.$wpurl.'action-off.gif\'" /></a>
 	<a href="http://www.hellocoton.fr" target="_blank" style="display:block;width:27px;height:26px;position:absolute;top:0;left:120px;"><img src="'.$wpurl.'hellocoton.gif" border="0" alt="Rendez-vous sur Hellocoton !" style="padding:0;border:0;margin:0;float:none;" /></a></span>';
 	
-	return $return.'<script type="text/javascript">hellocoton_plugin_url="'.$wpurl.'"</script><script src="http://widget.hellocoton.fr/widget03.js?uniq='.$rand.'&url='.$articleUrl.'" type="text/javascript"></script>';
+	return $return.'<script type="text/javascript">hellocoton_plugin_url="'.$wpurl.'"</script><script src="http://widget.hellocoton.fr/widget05.js?uniq='.$rand.'&url='.$articleUrl.'" type="text/javascript"></script>';
 	
 }
 
