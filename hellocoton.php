@@ -4,7 +4,7 @@ Plugin name: Hellocoton
 Plugin URI: http://www.hellocoton.fr/
 Author: Team Hellocoton
 Author URI: http://www.hellocoton.fr/
-Version: 0.6
+Version: 0.7
 Description: Ajoute un bouton "J'aime cet article" par hellocoton.
 
 INSTALL :
@@ -36,10 +36,26 @@ function hellocoton_html() {
 	
 }
 
+function hellocoton_feed_html() {
+	
+	$articleUrl = urlencode(strip_tags(get_permalink()));
+	
+	$rand = rand(0,1000000);
+	
+	$wpurl = WP_PLUGIN_URL."/hellocoton/";
+
+	$return = '<span id="hellocoton_'.$rand.'" style="display:block;width:147px;height:26px;position:relative;padding:0;border:10px 0px;margin:0;clear:both;">
+	<a id="hellocoton_vote_'.$rand.'" href="http://www.hellocoton.fr/vote?url='.$articleUrl.'" style="display:block;width:120px;height:26px;position:absolute;top:0;left:0;padding:0;border:0;margin:0;"><img src="'.$wpurl.'action-on.gif" border="0" style="padding:0;border:0;margin:0;float:none;" onmouseover="javascript:this.src=\''.$wpurl.'action-on-h.gif\'" onmouseout="javascript:this.src=\''.$wpurl.'action-on.gif\'" /></a>
+	<a href="http://www.hellocoton.fr" target="_blank" style="display:block;width:27px;height:26px;position:absolute;top:0;left:120px;"><img src="'.$wpurl.'hellocoton.gif" border="0" alt="Rendez-vous sur Hellocoton !" style="padding:0;border:0;margin:0;float:none;" /></a></span>';
+	
+	return $return;
+	
+}
+
 function hellocoton_hook($content='') {
 
 	if (is_feed()) {
-		$content .= hellocoton_html();
+		$content .= hellocoton_feed_html();
 	} else {
 		$content .= hellocoton_html();
 	}

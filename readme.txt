@@ -3,7 +3,7 @@ Contributors: Team Hellocoton
 Requires at least: 2.0
 Tested up to: 2.7.1
 Tags: hellocoton, blog, vote
-Stable tag: 0.6
+Stable tag: 0.7
 
 == Description ==
 Ajoute un bouton "J'aime cet article".
