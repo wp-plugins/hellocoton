@@ -8,4 +8,4 @@ Stable tag: 2.0
 == Description ==
 Ajoute un bouton "J'aime cet article".
 
-Permettez ˆ vos visiteurs de voter pour vos articles sur [hellocoton](http://www.hellocoton.fr). Cela aura pour effet d'ajouter votre article sur sa page de recommandation sur [hellocoton](http://www.hellocoton.fr) et d'en informer ses ami(e)s
+Permettez Ã  vos visiteurs de voter pour vos articles sur [hellocoton](http://www.hellocoton.fr). Cela aura pour effet d'ajouter votre article sur sa page de recommandation sur [hellocoton](http://www.hellocoton.fr) et d'en informer ses ami(e)s
