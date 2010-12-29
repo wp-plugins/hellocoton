@@ -1,7 +1,7 @@
 === Hellocoton ===
 Contributors: Team Hellocoton
 Requires at least: 2.0
-Tested up to: 2.9.1
+Tested up to: 3.0.3
 Tags: hellocoton, blog, vote
 Stable tag: 2.0
 
