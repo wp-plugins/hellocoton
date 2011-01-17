@@ -4,7 +4,7 @@ Plugin name: Hellocoton
 Plugin URI: http://www.hellocoton.fr/
 Author: Team Hellocoton
 Author URI: http://www.hellocoton.fr/
-Version: 2.0
+Version: 2.5.1
 Description: Ajoute un bouton "J'aime cet article" par hellocoton.
 
 INSTALL :
@@ -16,7 +16,7 @@ if(!defined('WP_CONTENT_URL')) define('WP_CONTENT_URL',get_option('siteurl').'/w
 if(!defined('WP_PLUGIN_URL')) define('WP_PLUGIN_URL',WP_CONTENT_URL.'/plugins');
 
 add_filter('the_content', 'hellocoton_hook');
-add_filter('the_excerpt', 'hellocoton_hook');
+//add_filter('the_excerpt', 'hellocoton_hook');
 
 function hellocoton_html() {
 	
@@ -28,7 +28,7 @@ function hellocoton_html() {
 	
 	$style = "padding:0;border:0;margin:0;float:none;background:transparent;-webkit-box-shadow: none;-webkit-transform: rotate(0deg);";
 
-	$return = '<span id="hellocoton_'.$rand.'" style="display:block;width:147px;height:30px;position:relative;padding:0;border:10px 0px;margin:0;clear:both;">
+	$return = '<span class="hellocoton_vote" id="hellocoton_'.$rand.'" style="display:block;width:147px;height:30px;position:relative;padding:0;border:10px 0px;margin:0;clear:both;">
 	<a id="hellocoton_load_'.$rand.'" href="#" onclick="javascript:return false;"  style="display:block;width:120px;height:30px;position:absolute;top:0;left:0;padding:0;border:0;margin:0;"><img src="'.$wpurl.'loading.gif" border="0" style="'.$style.'" /></a>
 	<a id="hellocoton_vote_'.$rand.'" href="#" onclick="return false;"  style="display:none;width:120px;height:30px;position:absolute;top:0;left:0;padding:0;border:0;margin:0;"><img src="'.$wpurl.'action-on.gif" border="0" style="'.$style.'" onmouseover="javascript:this.src=\''.$wpurl.'action-on-h.gif\'" onmouseout="javascript:this.src=\''.$wpurl.'action-on.gif\'" /></a>
 	<a id="hellocoton_unvote_'.$rand.'" href="#" onclick="javascript:return false;"  style="display:none;width:120px;height:30px;position:absolute;top:0;left:0;padding:0;border:0;margin:0;"><img src="'.$wpurl.'action-off.gif" border="0" style="'.$style.'" onmouseover="javascript:this.src=\''.$wpurl.'action-off-h.gif\'" onmouseout="javascript:this.src=\''.$wpurl.'action-off.gif\'" /></a>
